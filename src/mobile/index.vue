@@ -24,7 +24,7 @@
                             <div class="ui-alert__container" v-show={this.visible}>
                                 <div class="ui-alert__title">{this.$slots.title}</div>
                                 <div class="ui-alert__info">{this.$slots.text}</div>
-                                <div class={{"ui-alert__button": true, "ui-alert__button--access": this.access}} onClick={this.emit} onTouchstart={this.handle.bind(this, 0)} onTouchend={this.handle.bind(this, 200)}>
+                                <div class={{ "ui-alert__button": true, "ui-alert__button--access": this.access }} onClick={this.emit} onTouchstart={this.handle.bind(this, 0)} onTouchend={this.handle.bind(this, 200)}>
                                     {this.$slots.button || '确定'}
                                 </div>
                             </div>
