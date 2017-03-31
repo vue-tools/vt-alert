@@ -2,7 +2,7 @@
 
 <script>
     import Vue from 'vue'
-    import plugin from './plugin'
+    import plugin from '../plugin'
 
     let Component = {
         props: {
