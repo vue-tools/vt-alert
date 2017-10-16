@@ -36,7 +36,7 @@ export default {
 </template>
 
 <script>
-    import Alert from 'src/pc'
+    import Alert from 'vt-alert'
     import Buttons from 'vt-button'
 
     export default {
@@ -56,7 +56,10 @@ export default {
                 this.$alert({
                     title: '这是 title',
                     text: '这是 text',
-                    button: 'button'
+                    button: 'button',
+                    hide() {
+                        console.log('hide')
+                    }
                 })
             }
         },
@@ -66,4 +69,24 @@ export default {
         }
     }
 </script>
+```
+
+## Interface
+
+```interface
+props:
+  visible:
+    type: Boolean
+    default: ''
+    description: 组件显示或隐藏，必填
+slots:
+  title:
+    description: 组件的标题
+  text:
+    description: 组件的内容
+  button:
+    description: 组件的确认按钮，默认: ``确定``
+events:
+  hide:
+    description: 组件隐藏之后的回调事件
 ```

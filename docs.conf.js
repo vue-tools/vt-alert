@@ -5,13 +5,8 @@ module.exports = {
     webpack: {
         resolve: {
             alias: {
-                'src': path.join(__dirname, 'src')
+                'vt-alert': path.join(__dirname, 'dist/pc')
             }
-        },
-        babel: {
-            plugins: [
-                ["diff-platform", { "path": path.join(__dirname, 'dist'), "platform": "pc"}]
-            ]
         }
     },
     md: { dir: './' },
